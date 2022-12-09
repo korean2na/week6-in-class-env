@@ -1,0 +1,13 @@
+{% extends './layout.html.j2' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+<h1>Home</h1>
+    {% if user.is_authenticated %}
+        <p>Welcome to our app, {{ user.username }}</p>
+    {% else %}
+        <p>Please <a href="{{ url_for('auth.login')}}">login</a></p>
+    {% endif %}
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, quod ab fugiat id nemo in necessitatibus ullam nostrum quis voluptates!</p>
+{% endblock content %}

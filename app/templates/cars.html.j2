@@ -1,0 +1,27 @@
+{% for id, n in car_data.items() %}
+    <h2>{{ n['name'] }}</h2>
+    <ul>
+        <li>ID #: {{ id }}</li>
+        <li>Year: {{ n['year'] }}</li>
+        <li>Selling Price: {{ n['selling_price'] }}</li>
+    </ul>
+    <hr>
+{% endfor %}
+
+{# {% for n in car_data %}
+    {% for value in n %}
+        <h2>Name: {{ name }}</h2>
+        <ul>
+            <li>Year: {{ year }}</li>
+            <li>Selling Price: {{ selling_price }}</li>
+        </ul>
+    {% endfor %}
+{% endfor %} #}
+
+
+{# <ul>
+    <li>User ID: {{ user_id }}</li>
+    <li>Email: {{ email }}</li>
+    <li>Favorite Color: {{ favorite_color }}</li>
+    <li>Is Active: {{ is_active }}</li>
+</ul> #}
